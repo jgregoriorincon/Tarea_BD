@@ -1,0 +1,160 @@
+\begin{table}[H]
+\centering
+\caption{Definiciones de las entidades del modelo Relacional de Policía Nacional --- Bancos.}
+\renewcommand{\arraystretch}{1.5}% Spread rows out...
+\label{tab-DiccR-2a}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Entidad}  & \textbf{Definición}\\ \midrule
+Banco    & Entidad Bancaria Principal. \\
+BandaCriminal  & Banda que agrupa a delincuentes.\\
+Delincuente & Persona que asalta una sucursal bancaria.\\
+Juez & Persona que Juzga a los delincuentes.\\
+Sucursal & Almacena los datos básicos de la Sucursal.\\
+Vigilante & Almacena los datos básicos de los vigilantes que custodian las sucursales.\\
+DelincuenteJuez & Almacena los datos del Juez que esta juzgando a un delincuente.\\
+DelincuenteSucursal & Almacena los datos del delincuente que asalta una sucursal y en que fecha.\\
+SucursalVigilante & Almacena los datos del vigilante que custodia una sucursal.\\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad Banco
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Relacional Banco.}
+\label{tab-DiccR-2b}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodBanco	        &	DCodigo	    &	Código de Identificación del Banco	&		&	No Nulo, Único\\
+Nombre	            &	DNombre	    &	Nombre del Banco	                &		&	No Nulo\\
+DireccionPrincipal	&	DDireccion	&	Dirección de la Entidad	            &		&	No Nulo\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad BandaCriminal
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Relacional BandaCriminal.}
+\label{tab-DiccR-2c}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodBanda	&	DCodigo	&	Código de Identificación de la Banda Criminal	&		&	No Nulo, Único\\
+NumeroMiembros	&	DCantidad	&	Cantidad de Miembros de la Banda.	&		&	No Nulo\\
+Nombre	&	DNombre	&	Nombre de la Banda Criminal	&		&	\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad Delincuente
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Relacional Delincuente.}
+\label{tab-DiccR-2d}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodDelincuente	&	DCodigo	&	Código de Identificación del Delincuente	&		&	No Nulo, Único\\
+NombreDelincuente	&	DNombre	&	Nombres completos del delincuente.	&		&	No Nulo\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad Juez
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Relacional Juez.}
+\label{tab-DiccR-2f}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodJuez	&	DCodigo	&	Código de Identificación del Juez	&		&	No Nulo, Único\\
+NombreJuez	&	DNombre	&	Nombre del Juez.	&		&	No Nulo\\
+TiempoServicio	&	DCantidad	&	Años de Servicio del Juez	&		&	No Nulo\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad Sucursal
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Relacional Sucursal.}
+\label{tab-DiccR-2g}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodSucursal	&	DCodigo	&	Código de Identificación de la Sucursal	&		&	No Nulo, Único\\
+CodBanco	&	DCodigo	&	Código de Identificación del Banco	&		&	No Nulo, Único\\
+Nombre	&	DNombre	&	Nombre de la Sucursal	&		&	No Nulo\\
+Direccion	&	DDireccion	&	Dirección de la Sucursal	&		&	No Nulo\\
+NumeroEmpleados	&	DCantidad	&	Numero de empleados de la Sucursal	&		&	No Nulo\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad Vigilante
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Relacional Vigilante.}
+\label{tab-DiccR-2h}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodVigilante	&	DCodigo	&	Código de Identificación del Vigilante	&		&	No Nulo, Único\\
+Nombres	&	DNombre	&	Nombres del Vigilante	&		&	No Nulo\\
+Apellidos	&	DNombre	&	Apellidos del Vigilante	&		&	No Nulo\\
+Edad	&	DEdad	&	Edad del Vigilante	&		&	No Nulo\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad DelincuenteJuez
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Relacional DelincuenteJuez.}
+\label{tab-DiccR-2i}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodDelincuente	&	DCodigo	&	Código de Identificación del Delincuente	&		&	No Nulo, Único\\
+CodJuez	&	DCodigo	&	Código de Identificación del Juez	&		&	No Nulo, Único\\
+Condenado	&	DSiNo	&	Almacena si el delincuente recibió o no una condena	&		&	\\
+TiempoCondena	&	DCantidad	&	Almacena el tiempo (en meses) de la condena del delincuente.	&		&	\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad DelincuenteSucursal
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Relacional DelincuenteSucursal.}
+\label{tab-DiccR-2j}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodDelincuente	&	DCodigo	&	Código de Identificación del Delincuente	&		&	No Nulo, Único\\
+CodSucursal	&	DCodigo	&	Código de Identificación de la Sucursal	&		&	No Nulo, Único\\
+Fecha	&	DFecha	&	Fecha en que se produjo el atraco	&		&	No Nulo \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad SucursalVigilante
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Relacional SucursalVigilante.}
+\label{tab-DiccR-2k}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodSucursal	&	DCodigo	&	Código de Identificación de la Sucursal	&		&	No Nulo, Único\\
+CodVigilante	&	DCodigo	&	Código de Identificación del Vigilante	&		&	No Nulo, Único\\
+Arma	&	DSiNo	&	Almacena si el servicio fue prestado con o sin arma.	&		&	No Nulo \\
+Fecha	&	DFecha	&	Almacena la fecha en la que se presta el servicio.	&		& No Nulo	\\
+\bottomrule
+\end{tabular}
+\end{table}

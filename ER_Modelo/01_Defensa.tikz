@@ -1,0 +1,53 @@
+\begin{figure}[H]
+   \centering
+    \begin{adjustbox}{max width=1.1\textwidth}
+        \begin{tikzpicture}
+          % Entidades - Relaciones
+          \matrix[row sep=2.5cm, column sep=2.5cm] {
+            \relationship{Rel_Sol_Comp}{Pertenece}  & \entity{compania}{Compañia}                   & \relationship{Rel_Cuar_Comp}{Destinada} \\     
+            \entity{soldado}{Soldado}               & \relationship{rel_Sol_Cuartel}{Destinado}     & \entity{cuartel}{Cuartel} \\
+            \relationship{Rel_Sol_Serv}{Realiza}    & \relationship{Rel_Sol_Armas}{Pertenece}       & \entity{armas}{Armas} \\
+            \entity{servicio}{Servicio}              \\
+          };
+          % relationships
+          \buildrelationship{rel_Sol_Cuartel}{soldado}{(1,n)}{cuartel}{(1,1)}
+          \buildrelationship{Rel_Sol_Serv}{soldado}{(1,n)}{servicio}{(1,n)}
+          \buildrelationship{Rel_Sol_Comp}{soldado}{(1,n)}{compania}{(1,1)}
+          \buildrelationship{Rel_Sol_Armas}{soldado}{(1,n)}{armas}{(1,1)}
+          \buildrelationship{Rel_Cuar_Comp}{cuartel}{(1,n)}{compania}{(1,n)}
+          
+          %atributos para las entidades
+          %Soldado
+          \pkattrib{soldado}{145}{CodSoldado}{35}
+          \attrib{soldado}{165}{Nombres}{30}
+          \attrib{soldado}{190}{Apellidos}{30}
+          \attrib{soldado}{215}{Grado}{35}
+          
+          %Compañia
+          \pkattrib{compania}{135}{CodCompañia}{25}
+          \attrib{compania}{45}{Actividad}{25}
+          
+          %Cuartel
+          \pkattrib{cuartel}{50}{CodCuartel}{40}
+          \attrib{cuartel}{30}{NombreCuartel}{40}
+          \attrib{cuartel}{10}{Latitud}{35}
+          \attrib{cuartel}{350}{Longitud}{35}
+          \attrib{cuartel}{330}{Direccion}{40}
+          \attrib{cuartel}{310}{Ciudad}{40}
+          
+          %Armas
+          \pkattrib{armas}{225}{CodArmas}{25}
+          \attrib{armas}{315}{NombreArmas}{25}
+          
+          %Servicio
+          \pkattrib{servicio}{30}{CodServicio}{30}
+          \attrib{servicio}{0}{Descripción}{30}
+          
+          %atributos para las relaciones
+          \attrib{Rel_Sol_Serv}{180}{Fecha}{25}
+          
+        \end{tikzpicture}
+    \end{adjustbox}
+    \caption{Modelo Entidad Relación de Defensa.}
+    \label{fig:Defensa_MER}
+\end{figure}

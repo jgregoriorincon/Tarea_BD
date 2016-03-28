@@ -1,0 +1,18 @@
+\begin{table}[H]
+\centering
+\caption{Dominios del modelo ER Ministerio de Defensa.}
+\renewcommand{\arraystretch}{1.5}% Spread rows out...
+\label{tab-DomER-01}
+%\begin{tabular}{@{}lllllp{4cm}@{}}%{p{2cm} p{2cm} p{4cm} p{2cm} p{1cm} p{4cm}}
+\begin{tabular}{>{\bfseries}m{2.5cm} >{\centering}m{2cm} >{}m{4cm} >{\arraybackslash}m{2cm}>{\arraybackslash}m{1cm}>{\arraybackslash}m{6cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Nombre}} & \multicolumn{1}{c}{\textbf{Tipo}} & \multicolumn{1}{c}{\textbf{Formato}} & \multicolumn{1}{c}{\textbf{Unidad}} & \multicolumn{1}{c}{\textbf{Valores}} & \multicolumn{1}{c}{\textbf{Descripción}}                                                          \\ \midrule
+DCodigo     & Texto             & \{Dígitos, Letras\}1,10              &                                     &                                      & Identificador Principal                                 \\\hline
+DLatitud    & Numérico          & \{Dígitos\}                          & Grados Decimales                    & --90 a 90                            & Grados decimales con respecto al Ecuador                \\\hline
+DLongitud   & Numérico          & \{Dígitos\}                          & Grados Decimales                    & --180 a 180                          & Grados decimales con respecto al meridiano de Greenwich \\\hline
+DNombre     & Texto             & \{Dígitos, Letras\}1,100             &                                     &                                      & Nombre de persona o institución                         \\\hline
+DDireccion  & Texto             & \{Dígitos, Letras\}1,250             &                                     &                                      & Ubicación de la institución                             \\\hline
+DCiudad     & Texto             & \{Dígitos, Letras\}1,100             &                                     &                                      & Nombre de las ciudades                                  \\\hline
+DFecha      & Texto             & \{dd/mm/yyyy\}                       & Fecha                               &                                      & Fecha de ejecución del servicio                         \\\bottomrule
+\end{tabular}
+\end{table}

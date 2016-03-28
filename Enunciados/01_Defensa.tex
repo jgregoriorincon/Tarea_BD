@@ -1,0 +1,11 @@
+El Ministerio de Defensa desea diseñar una Base de Datos para llevar un cierto control de los soldados que realizan el servicio militar. Datos significativos a tener en cuenta: 
+\begin{itemize}  
+\item Un soldado se define por su código de soldado (único), su nombre y apellidos, y su grado. Existen varios cuarteles, cada uno se define por código de cuartel, nombre y ubicación.
+\item Hay que tener en cuenta que existen diferentes armas de Ejercito (Infantería, Artillería, Caballería,...) y cada uno se define por un código y denominación.
+\item Los soldados están agrupados en compañías, siendo significativa para cada una de estás, el número de compañía y la actividad principal que realiza.
+\item Se desea controlar los servicios que realizan los soldados (guardias, casino, PM,...), y se definen por el código de servicio y descripción. 
+\item Un soldado pertenece a una única arma y a una única compañía, durante todo el servicio militar. 
+\item A una compañía pueden pertenecer soldados de diferentes armas, no habiendo relación directa entre compañías y armas.
+\item Los soldados de una misma compañía pueden estar destinados en diferentes cuarteles, es decir, una compañía puede estar ubicada en varios cuarteles, y en un cuartel puede haber varias compañías. Eso sí, un soldado sólo está en un cuartel. Debe georreferenciar el cuartel y el soldado, para identificar geográficamente donde se encuentra apostado.
+\item Un soldado realiza varios servicios a lo largo de la prestación de Servicio. Un mismo servicio puede ser realizado por más de un soldado (con independencia de la compañía), siendo significativa la fecha de realización.\ldots 
+\end{itemize}

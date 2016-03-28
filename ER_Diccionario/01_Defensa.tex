@@ -1,0 +1,86 @@
+\begin{table}[H]
+\centering
+\caption{Definiciones de las entidades del modelo Entidad Relación de Defensa.}
+\renewcommand{\arraystretch}{1.5}% Spread rows out...
+\label{tab-Dicc-00}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Entidad}  & \textbf{Definición}\\ \midrule
+Armas    & Agrupador de Soldados que se encuentran en compañías y Cuarteles. \\
+Cuartel  & Espacio físico donde se concentran varias armas, compañías y Soldados.\\
+Compania & Ente que agrupa soldados de diversas armas.\\
+Servicio & Actividad que realiza un soldado en un momento dado.\\
+Soldado  & Persona que presta un servicio militar en un arma, compañía, cuartel.\\ \bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad Armas
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Armas.}
+\label{tab-Dicc-01}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodArmas    & DCodigo   & Código de identificación de las armas &   & No Nulo, Único\\
+NombreArmas & DNombre   & Nombre de las armas del Ejercito  &   & No Nulo\\ \bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad Cuartel
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Cuartel.}
+\label{tab-Dicc-02}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodCuartel	    &   DCodigo	    &   Código de identificación del Cuartel	    &	&No Nulo, Único	\\
+NombreCuartel	&   DNombre	    &   Nombre del Cuartel	                        &	&No Nulo	\\
+Latitud	        &   Dlatitud	&   Latitud del cuartel en grados decimales	    &	&No Nulo	\\
+Longitud	    &   DLongitud	&   Longitud del cuartel en grados decimales	&	&No Nulo	\\
+Direccion	    &   DDireccion	&   Dirección del Cuartel	                    &	&No Nulo	\\
+Ciudad	        &   DCiudad	    &   Ciudad donde está ubicado el Cuartel	    &	&No Nulo	\\\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad Compañia
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Compania.}
+\label{tab-Dicc-03}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodCompania	    &   DCodigo	    &   Código de Identificación de la Compañía	        &	&No Nulo, Único	\\
+Actividad	&   DNombre	    &   Actividad de la Compañía	                        &	&No Nulo	\\\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad Servicio
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Servicio.}
+\label{tab-Dicc-04}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodServicio	    &   DCodigo	    &   Código de Identificación del Servicio	        &	&No Nulo, Único	\\
+Descripcion	    &   DNombre	    &   Nombre del Servicio	                            &	&No Nulo	\\\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad Soldado
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Soldado.}
+\label{tab-Dicc-05}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodSoldado	    &   DCodigo	    &   Código de identificación del Soldado	    &	&No Nulo, Único	\\
+Nombres	        &   DNombre	    &   Nombres del Soldado	        &	&No Nulo	\\
+Apellidos       &   DNombre	    &   Apellidos del Soldado	    &	&No Nulo	\\
+Grado	        &   	        &   Grado del Soldado	        &	&No Nulo	\\\bottomrule
+\end{tabular}
+\end{table}

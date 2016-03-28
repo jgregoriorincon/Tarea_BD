@@ -1,0 +1,27 @@
+\begin{table}[H]
+    \centering
+    \caption{Dominios del modelo relacional Olimpiadas.}
+    \renewcommand{\arraystretch}{1.5}% Spread rows out...
+    \label{tab-DomR-02}
+    \resizebox{1.3\textwidth}{!}{
+        \begin{tabular}
+            {>{\bfseries}m{3.0cm} >{\centering}m{2cm} >{}m{4cm} >{\arraybackslash}m{2cm}>{\arraybackslash}m{3cm}>{\arraybackslash}m{12cm}>{\arraybackslash}m{8cm}}
+            \toprule
+            \multicolumn{1}{c}{\textbf{Nombre}} & \multicolumn{1}{c}{\textbf{Tipo}} & \multicolumn{1}{c}{\textbf{Formato}} & \multicolumn{1}{c}{\textbf{Unidad}} & \multicolumn{1}{c}{\textbf{Valores}} & \multicolumn{1}{c}{\textbf{Descripción}} &
+            \multicolumn{1}{c}{\textbf{Atributos}}\\ \midrule
+            DCodigo     & VARCHAR          & \{Dígitos, Letras\}1,10       &                   &                           & Identificador Principal                                 & ComplejoDeportivo: CodComplejo \newline  Unideportivo: CodComplejoUni \newline  Polideportivo: CodComplejoPoli \newline Evento: CodEvento \newline Area: CodArea \newline SedeOlimpica: CodSede \newline ElementoDeportivo: CodElemento \newline Comisario: CodComisario \\\hline
+            DLatitud     & NUMBER          & \{Dígitos\}                   & Grados Decimales  & --90 a 90                 & Grados decimales con respecto al Ecuador                & ComplejoDeportivo: Latitud \\\hline
+            DLongitud    & NUMBER          & \{Dígitos\}                   & Grados Decimales  & --180 a 180               & Grados decimales con respecto al meridiano de Greenwich & ComplejoDeportivo: Longitud \\\hline
+            DNombre      & VARCHAR         & \{Dígitos, Letras\}1,100      &                   &                           & Nombre de persona o institución                         & Unideportivo: Nombre \newline ComplejoDeportivo: Jefe \newline Polideportivo: Nombre \newline SedeOlimpica: Nombre \newline ElementoDeportivo: Nombre \newline Comisario: Nombre \newline Area: NombreDeporte  \\\hline
+            DDireccion   & VARCHAR         & \{Dígitos, Letras\}1,250      &                   &                           & Ubicación de la institución                             & ComplejoDeportivo: Direccion \\\hline
+            DCiudad      & VARCHAR         & \{Dígitos, Letras\}1,100      &                   &                           & Nombre de las ciudades                                  & ComplejoDeportivo: Ciudad \\\hline
+            DCantidad    & NUMBER          & \{Dígitos\}                   &                   & $ > 0$                    & Cantidad de Personas, Elementos, Comisarios, etc.       & SedeOlimpica: NumeroComplejos \newline Evento: NumeroParticipantes \newline Evento: NumeroComisarios \newline ElementoDeportivo: Stock \newline EventoElementoDeportivo: Cantidad \\\hline
+            DArea        & NUMBER          & \{Dígitos\                    & Metros Cuadrados  & $ > 0$                    & Área en metros cuadrados de un complejo                 & Area: Extension \newline Polideportivo: Extension \newline Unideportivo: Extension \\\hline
+            DDuracion    & TIME            & \{hh:mm\}                     & Horas -- Minutos  &                           & Tiempo de duración del evento                           & Evento: DuracionEvento \\\hline
+            DPresupuesto & NUMBER          & \{Dígitos\}1,n                & Moneda            &                           & Presupuesto asignado                                    & Unideportivo: Presupuesto \newline Polideportivo: Presupuesto \newline SedeOlimpica: Presupuesto \\\hline
+            DRol         & VARCHAR         & \{Letras\}1,10                &                   & Juez \newline Observador  & Rol a ejecutar por un comisario                         & EventoComisario: Rol \\\hline
+            DFecha       & DATE             & \{dd/mm/yyyy\}                & Fecha             &                           & Fecha de ejecución del servicio                         & Evento: Fecha \\
+            \bottomrule
+        \end{tabular}
+    }
+\end{table}

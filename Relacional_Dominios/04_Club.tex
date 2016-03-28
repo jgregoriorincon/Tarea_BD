@@ -1,0 +1,41 @@
+\begin{table}[H]
+    \centering
+    \caption{Dominios del modelo relacional Club Náutico.}
+    \renewcommand{\arraystretch}{1.4}% Spread rows out...
+    \label{tab-DomR-04}
+    \resizebox{1.4\textwidth}{!}{
+        \begin{tabular}
+            {>{\bfseries}m{3.0cm} >{\centering}m{2cm} >{}m{4cm} >{\arraybackslash}m{2cm}>{\arraybackslash\centering}m{2cm}>{\arraybackslash}m{9cm}>{\arraybackslash}m{7cm}}
+            \toprule
+            \multicolumn{1}{c}{\textbf{Nombre}} & \multicolumn{1}{c}{\textbf{Tipo}} & \multicolumn{1}{c}{\textbf{Formato}} & \multicolumn{1}{c}{\textbf{Unidad}} & \multicolumn{1}{c}{\textbf{Valores}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Atributos}}\\ \midrule
+DCodigo     & VARCHAR  & \{Dígitos, Letras\}1,10   &        &                & Identificador Principal                       & Amarre: CodAmarre \newline Embarcacion: CodEmbarcacion \newline Empleado: CodEmpleado \newline Socio: CodSocio \newline Zona: CodZona \newline Especialidad: CodEspecialidad   \\ \hline
+DNombre     & VARCHAR  & \{Dígitos, Letras\}1,100  &        &                & Nombre de persona o institución               & Embarcacion: Nombre \newline Embarcacion: Matricula \newline Empleado: Nombres \newline Empleado: Apellidos \newline Socio: Nombres \newline Socio: Apellidos \newline Zona: Letra        \\ \hline
+DDireccion  & VARCHAR  & \{Dígitos, Letras\}1,250  &        &                & Ubicación de la institución                   & Empleado: Direccion \newline Socio: Direccion        \\ \hline
+DEspecialidad & VARCHAR  & \{Dígitos, Letras\}1,100  &      &                & Especialidades en Barcos                      & Especialidad: Especialidad      \\ \hline
+DCantidad   & NUMBER   & \{Dígitos\}               &        & $ >= 0 $       & Cantidad de elementos, personas               & Amarre: Numero \newline Amarre: Agua \newline Amarre: Luz \newline Zona: Profundidad \newline Zona: Ancho \newline Zona: CantidadBarcos \newline ZonaEmpleado: CantidadBarcos       \\ \hline
+DCedula     & VARCHAR  & \{Dígitos\}1,10           &        &                & Cédula de Ciudadanía                          & Socio: Cedula         \\ \hline
+DTelefono   & VARCHAR  & \{Dígitos\}1,15           &        &                & Número de Teléfono                            & EmpleadoTelefono: Telefono \newline SocioTelefono: Telefono         \\ \hline
+DTipoBarco  & VARCHAR  & \{Letras\}1,20            &        &                & Tipo de Barco                                 & Embarcacion: Tipo \newline Zona: TipoBarcos         \\ 
+            \bottomrule
+        \end{tabular}
+    }
+\end{table}
+
+
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.4}% Spread rows out...
+    \resizebox{1.4\textwidth}{!}{
+        \begin{tabular}
+            {>{\bfseries}m{3.0cm} >{\centering}m{2cm} >{}m{4cm} >{\arraybackslash}m{2cm}>{\arraybackslash\centering}m{2cm}>{\arraybackslash}m{9cm}>{\arraybackslash}m{7cm}}
+            \toprule
+            \multicolumn{1}{c}{\textbf{Nombre}} & \multicolumn{1}{c}{\textbf{Tipo}} & \multicolumn{1}{c}{\textbf{Formato}} & \multicolumn{1}{c}{\textbf{Unidad}} & \multicolumn{1}{c}{\textbf{Valores}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Atributos}}\\ \midrule
+
+DDimensiones& VARCHAR  & \{Letras\}1,50            &        &                & Dimensiones del Banco (Ancho, largo, Calado)  & Embarcacion: Dimensiones         \\ \hline
+DContrato   & VARCHAR  & \{Letras\}1, 2            &        & SI \newline NO & Determina si tiene contratado servicios       & Amarre: Mantenimiento         \\ \hline
+
+DFecha      & DATE     & \{dd/mm/yyyy\}            & Fecha  &                & Fecha de ejecución del servicio               & Socio: FechaAfiliacion \newline Amarre: FechaCompra \newline AmarreEmbarcacion: FechaAsignacion         \\
+            \bottomrule
+        \end{tabular}
+    }
+\end{table}

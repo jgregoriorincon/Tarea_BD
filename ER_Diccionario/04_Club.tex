@@ -1,0 +1,105 @@
+\begin{table}[H]
+\centering
+\caption{Definiciones de las entidades del modelo Entidad Relación del Club Náutico.}
+\renewcommand{\arraystretch}{1.5}% Spread rows out...
+\label{tab-Dicc-30}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Entidad}  & \textbf{Definición}\\ \midrule
+Amarre    & Lugar donde se deja un Bote. \\
+Embarcacion  & Bote propiedad de un socio.\\
+Empleado & Encargado de cuidar los botes.\\
+Socio & Persona afiliada a un Club Náutico.\\
+Zona & Lugar de ubicación de los amarres.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad Amarre
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Amarre.}
+\label{tab-Dicc-31}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+codAmarre	&	DCodigo	&	Código de Identificación del Amarre	&		&	No Nulo, Único\\
+Numero	&	Dcantidad	&	Numero del Amarre	&		&	No Nulo\\
+Mantenimiento	&	Dcontrato	&	Si tiene contratado Servicios	&		&	No Nulo\\
+Agua	&	DCantidad	&	Cantidad medida en el contador de Agua	&		&	No Nulo\\
+Luz	&	Dcantidad	&	Cantidad medida en el contador de Luz	&		&	Nulo\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad Embarcacion
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Embarcacion.}
+\label{tab-Dicc-32}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodEmbarcacion	&	DCodigo	&	Código de Identificación del Barco	&		&	No Nulo, Único\\
+Nombre	&	DNombre	&	Nombre del Barco	&		&	No Nulo\\
+Matricula	&	DNombre	&	Matricula del Barco	&		&	No Nulo\\
+Tipo	&	DTipoBarco	&	Tipo de Barco	&		&	No Nulo\\
+Dimensiones	&	DDimensiones	&	Dimensiones del Barco	&		&	No Nulo\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad Empleado
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Empleado.}
+\label{tab-Dicc-33}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodEmpleado	&	DCodigo	&	Código de Identificación del Empleado	&		&	No Nulo, Único\\
+Nombres	&	DNombre	&	Nombres del Empleado	&		&	No Nulo\\
+Apellidos	&	DNombre	&	Apellidos del Empleado	&		&	No Nulo\\
+Direccion	&	DDireccion	&	Dirección del Empleado	&		&	No Nulo\\
+Telefono	&	DTelefono	&	Teléfono del Empleado	&		&	No Nulo\\
+Especialidad	& DEspecialidad		&	Especialidad	&		&	No Nulo\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad Socio
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Socio.}
+\label{tab-Dicc-34}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodSocio	&	DCodigo	&	Código de Identificación del Socio	&		&	No Nulo, Único\\
+Cedula	&	DCedula	&	Cedula del Socio	&		&	No Nulo\\
+Nombres	&	Dnombre	&	Nombres del Socio	&		&	No Nulo\\
+Apellidos	&	DNombre	&	Apellidos del Socio	&		&	No Nulo\\
+Direccion	&	DDireccion	&	Dirección del Socio	&		&	No Nulo\\
+Telefono	&	DTelefono	&	Teléfono del Socio	&		&	No Nulo\\
+FechaIngreso	&	DFecha	&	Fecha de Ingreso del Socio al Club Náutico	&		&	No Nulo\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad Zona
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Zona.}
+\label{tab-Dicc-35}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+codZona	&	DCodigo	&	Código de Identificación de la Zona	&		&	No Nulo, Único\\
+Letra	&	DLetra	&	Letra identificativa de la Zona	&		&	No Nulo\\
+TipoBarco	&	DTipoBarco	&	Tipo de barcos a ubicar en la zona	&		&	No Nulo\\
+NumeroBarcos	&	DCantidad	&	Numero de Barcos en la zona	&		&	No Nulo\\
+Profundidad	&	DCantidad	&	Profundidad de la Zona	&		&	No Nulo\\
+Ancho	&	DCantidad	&	Ancho de la Zona	&		&	No Nulo\\
+\bottomrule
+\end{tabular}
+\end{table}

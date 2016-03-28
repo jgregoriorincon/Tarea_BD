@@ -1,0 +1,84 @@
+\begin{figure}[H]
+   \centering
+    \begin{adjustbox}{max width=1.1\textwidth}
+        \begin{tikzpicture} 
+
+              \matrix[row sep=3cm, column sep=3cm] {
+                
+                \entity{emp}{Empleado} \\
+                
+                \relationship{rel_1}{Atiende}     &
+                \entity{zona}{Zona}         &
+                \relationship{rel_2}{Pertenece} 
+                
+                \\
+                \entity{socio}{Socio} & 
+                \relationship{rel_3}{Posee} &
+                \entity{amarre}{Amarre} 
+                
+                \\
+                
+                \relationship{rel_4}{Propietario} & 
+                \entity{emb}{Embarcacion} &
+                \relationship{rel_5}{Ocupa}  \\    
+              };
+              
+              % relationships
+              \buildrelationship{rel_1}{emp}{(1,n)}{zona}{(2,n)}
+              \buildrelationship{rel_2}{zona}{(1,1)}{amarre}{(2,n)}
+              \buildrelationship{rel_3}{amarre}{(0,n)}{socio}{(0,1)}
+              \buildrelationship{rel_4}{socio}{(1,1)}{emb}{(1,n)}
+              \buildrelationship{rel_5}{emb}{(0,1)}{amarre}{(1,1)}
+              
+              %atributos para las entidades
+              %Unideporte
+              \pkattrib{emp}{180}{CodEmpleado}{30}
+              \attrib{emp}{210}{Nombres}{35}
+              \attrib{emp}{240}{Apellidos}{30}
+              \mvattrib{emp}{0}{Especialidad}{30}
+              \attrib{emp}{-25}{Direccion}{35}
+              \mvattrib{emp}{-45}{Telefonos}{35}
+              
+              %Unideporte
+              \pkattrib{zona}{90}{CodZona}{25}
+              \attrib{zona}{50}{Letra}{25}
+              \attrib{zona}{20}{Profundidad}{35}
+              \attrib{zona}{-20}{Ancho}{25}
+              \attrib{zona}{-45}{TipoBarcos}{25}
+              \attrib{zona}{-90}{CantidadBarcos}{25}
+              
+              %Polideportivo
+              \pkattrib{socio}{90}{CodSocio}{15}
+              \attrib{socio}{145}{Cedula}{25}
+              \attrib{socio}{165}{Nombres}{30}
+              \attrib{socio}{185}{Apellidos}{30}
+              \attrib{socio}{205}{Direccion}{30}
+              \mvattrib{socio}{225}{Telefonos}{30}
+              \attrib{socio}{330}{FechaAfiliacion}{25}
+              
+              %Area
+              \pkattrib{amarre}{45}{CodAmarre}{35}
+              \attrib{amarre}{25}{Numero}{30}
+              \attrib{amarre}{5}{Mantenimiento}{30}
+              \attrib{amarre}{-15}{Agua}{35}
+              \attrib{amarre}{-35}{Luz}{35}
+              
+              %Sede
+              \pkattrib{emb}{155}{CodEmbarcacion}{30}
+              \attrib{emb}{30}{Matricula}{25}
+              \attrib{emb}{225}{Nombre}{20}
+              \attrib{emb}{270}{Tipo}{20}
+              \mvattrib{emb}{320}{Dimensiones}{23}
+              
+              
+              \attrib{rel_1}{270}{CantidadBarcos}{15}
+              \dvattrib{rel_3}{270}{FechaCompra}{20}
+              
+              \attrib{rel_5}{270}{FechaAsignacion}{15}
+              %\attrib{rel_4}{270}{FechaCompra}{15}
+      
+        \end{tikzpicture}
+    \end{adjustbox}
+    \caption{Modelo Entidad Relación del Club Náutico.}
+    \label{fig:Club_MER}
+\end{figure}

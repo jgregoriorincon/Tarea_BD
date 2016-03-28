@@ -1,0 +1,77 @@
+\begin{figure}[H]
+   \centering
+    \begin{adjustbox}{max width=1.3\textwidth}
+        \begin{tikzpicture} 
+          % Entidades - Relaciones
+          \matrix[row sep=3cm, column sep=3cm] {
+            
+            \entity{banco}{Banco} & 
+            \relationship{rel_1}{Pertenece}     &
+            \entity{sucursal}{Sucursal}
+            
+            \\
+            \entity{vigilante}{Vigilante} & 
+            \relationship{rel_2}{Cuida} & 
+            \relationship{rel_3}{Atraca} &
+            \entity{juez}{Juez} 
+            
+            \\
+            
+            \entity{banda}{BandaCriminal} & 
+            \relationship{rel_4}{Vinculado} & 
+            \entity{delincuente}{Delincuente} &
+            \relationship{rel_5}{Juzga} \\
+          };
+          
+          % relationships
+          \buildrelationship{rel_1}{banco}{(1,1)}{sucursal}{(1,n)}
+          \buildrelationship{rel_2}{vigilante}{(1,n)}{sucursal}{(1,n)}
+          \buildrelationship{rel_3}{sucursal}{(1,n)}{delincuente}{(1,n)}
+          \buildrelationship{rel_4}{delincuente}{(2,n)}{banda}{(1,1)}
+          \buildrelationship{rel_5}{delincuente}{(1,n)}{juez}{(1,n)}
+          
+          %atributos para las entidades
+          %Banco
+          \pkattrib{banco}{145}{CodBanco}{35}
+          \attrib{banco}{165}{Nombre}{30}
+          \attrib{banco}{185}{DireccionPrincipal}{30}
+          
+          %Sucursal
+          \pkattrib{sucursal}{145}{CodSucursal}{35}
+          \attrib{sucursal}{90}{Nombre}{20}
+          \attrib{sucursal}{40}{Direccion}{25}
+          \attrib{sucursal}{0}{NumeroEmpleados}{35}
+          
+          %Delincuente
+          \pkattrib{delincuente}{145}{CodDelincuente}{35}
+          \attrib{delincuente}{165}{Nombre}{30}
+          
+          %Vigilante
+          \pkattrib{vigilante}{145}{CodVigilante}{35}
+          \attrib{vigilante}{165}{Nombres}{30}
+          \attrib{vigilante}{190}{Apellidos}{30}
+          \attrib{vigilante}{215}{Edad}{35}
+          
+          %BandaCriminal
+          \pkattrib{banda}{165}{CodBanda}{35}
+          \attrib{banda}{185}{NumeroMiembros}{35}
+          \dvattrib{banda}{215}{Nombre}{35}
+          
+          %Juez
+          \pkattrib{juez}{165}{CodJuez}{30}
+          \attrib{juez}{135}{Nombre}{30}
+          \attrib{juez}{75}{TiempoServicio}{25}
+          
+          \dvattrib{rel_5}{0}{Condenado}{30}
+          \dvattrib{rel_5}{330}{TiempoCondena}{30}
+          
+          \attrib{rel_2}{90}{Fecha}{25}
+          \attrib{rel_2}{135}{Arma}{30}
+          
+          \attrib{rel_3}{180}{Fecha}{25}
+      
+    \end{tikzpicture}
+    \end{adjustbox}
+    \caption{Modelo Entidad Relación de la Policía Nacional --- Bancos.}
+    \label{fig:Policia_MER}
+\end{figure}

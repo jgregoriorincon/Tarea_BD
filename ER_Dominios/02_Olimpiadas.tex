@@ -1,0 +1,26 @@
+\begin{table}[H]
+\centering
+\caption{Dominios del modelo ER Olimpiadas.}
+\renewcommand{\arraystretch}{1.5}% Spread rows out...
+\label{tab-DomER-02}
+\resizebox{1.1\textwidth}{!}{
+    \begin{tabular}{>{\bfseries}m{2.5cm} >{\centering}m{2cm} >{}m{4cm} >{\arraybackslash}m{2cm}>{\arraybackslash}m{2.5cm}>{\arraybackslash}m{6cm}}
+    \toprule
+    \multicolumn{1}{c}{\textbf{Nombre}} & \multicolumn{1}{c}{\textbf{Tipo}} & \multicolumn{1}{c}{\textbf{Formato}} & \multicolumn{1}{c}{\textbf{Unidad}} & \multicolumn{1}{c}{\textbf{Valores}} & \multicolumn{1}{c}{\textbf{Descripción}}                                                          \\ \midrule
+    DCodigo     & Texto             & \{Dígitos, Letras\}1,10              &                                     &                                      & Identificador Principal                                 \\\hline
+    DLatitud    & Numérico          & \{Dígitos\}                          & Grados Decimales                    & --90 a 90                            & Grados decimales con respecto al Ecuador                \\\hline
+    DLongitud   & Numérico          & \{Dígitos\}                          & Grados Decimales                    & --180 a 180                          & Grados decimales con respecto al meridiano de Greenwich \\\hline
+    DNombre     & Texto             & \{Dígitos, Letras\}1,100             &                                     &                                      & Nombre de persona o institución                         \\\hline
+    DDireccion  & Texto             & \{Dígitos, Letras\}1,250             &                                     &                                      & Ubicación de la institución                             \\\hline
+    DCiudad     & Texto             & \{Dígitos, Letras\}1,100             &                                     &                                      & Nombre de las ciudades                                  \\\hline
+    
+    DCantidad   & Numérico          & \{Dígitos\}                          &                                     & $ > 0$                               & Cantidad de Personas, Elementos, Comisarios, etc.       \\\hline
+    DArea       & Numérico          & \{Dígitos\                           & Metros Cuadrados                    & $ > 0$                               & Área en metros cuadrados de un complejo                 \\\hline
+    DDuracion   & Tiempo            & \{hh:mm\}                            & Horas -- Minutos                    &                                      & Tiempo de duración del evento                           \\\hline
+    DPreupuesto & Numérico          & \{Dígitos\}1,n                       & Moneda                              &                                      & Presupuesto asignado                                    \\\hline
+    DRol        & Texto             & \{Letras\}1,10                       &                                     & Juez \newline Observador             & Rol a ejecutar por un comisario                         \\\hline
+    
+    DFecha      & Texto             & \{dd/mm/yyyy\}                       & Fecha                               &                                      & Fecha de ejecución del servicio                         \\\bottomrule
+    \end{tabular}
+}
+\end{table}

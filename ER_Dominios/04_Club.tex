@@ -1,0 +1,23 @@
+\begin{table}[H]
+\centering
+\caption{Dominios del modelo ER Club Náutico.}
+\renewcommand{\arraystretch}{1.5}% Spread rows out...
+\label{tab-DomER-04}
+%\begin{tabular}{@{}lllllp{4cm}@{}}%{p{2cm} p{2cm} p{4cm} p{2cm} p{1cm} p{4cm}}
+\begin{tabular}{>{\bfseries}m{2.5cm} >{\centering}m{2cm} >{}m{4cm} >{\arraybackslash}m{2cm}>{\arraybackslash}m{1cm}>{\arraybackslash}m{6cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Nombre}} & \multicolumn{1}{c}{\textbf{Tipo}} & \multicolumn{1}{c}{\textbf{Formato}} & \multicolumn{1}{c}{\textbf{Unidad}} & \multicolumn{1}{c}{\textbf{Valores}} & \multicolumn{1}{c}{\textbf{Descripción}}                                                          \\ \midrule
+DCodigo     & Texto             & \{Dígitos, Letras\}1,10              &                                     &                                      & Identificador Principal                                 \\\hline
+DNombre     & Texto             & \{Dígitos, Letras\}1,100             &                                     &                                      & Nombre de persona o institución                         \\\hline
+DDireccion  & Texto             & \{Dígitos, Letras\}1,250             &                                     &                                      & Ubicación de la institución                             \\\hline
+
+DCantidad   & Numérico          & \{Dígitos\}                          &                                     & $ > 0 $                              & Cantidad de elementos, personas                         \\\hline
+DCedula     & Texto             & \{Dígitos\}1,10                      &                                     &                                      & Cédula de Ciudadanía                                    \\\hline
+DTelefono   & Texto             & \{Dígitos\}1,15                      &                                     &                                      & Número de Teléfono                                      \\\hline
+DTipoBarco  & Texto             & \{Letras\}1,20                       &                                     &                                      & Tipo de Barco                                           \\\hline
+DDimensiones& Texto             & \{Letras\}1,50                       &                                     &                                      & Dimensiones del Banco (Ancho y largo, Calado)           \\\hline
+DContrato   & Texto             & \{Letras\}1, 2                       &                                     & SI \newline NO                       & Determina si tiene contratado servicios                 \\\hline
+
+DFecha      & Texto             & \{dd/mm/yyyy\}                       & Fecha                               &                                      & Fecha de ejecución del servicio                         \\\bottomrule
+\end{tabular}
+\end{table}

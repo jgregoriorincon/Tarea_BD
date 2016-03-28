@@ -1,0 +1,201 @@
+\begin{table}[H]
+\centering
+\caption{Definiciones de las entidades del modelo Relacional del Club Náutico.}
+\renewcommand{\arraystretch}{1.5}% Spread rows out...
+\label{tab-DiccR-3a}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Entidad}  & \textbf{Definición}\\ \midrule
+Amarre    & Lugar donde se deja un Bote. \\
+Embarcacion  & Bote propiedad de un socio.\\
+Empleado & Encargado de cuidar los botes.\\
+Especialidad & Especialidad sobre el cuidado de los barcos.\\
+Socio & Persona afiliada a un Club Náutico.\\
+Zona & Lugar de ubicación de los amarres.\\
+AmarreEmbarcacion & Asociación de una embarcación a un amarre. \\
+ZonaEmpleado & Determina el área de trabajo de un empleado. \\
+EmpleadoEspecialidad & Especialidades de cada empleado. \\
+EmpleadoTelefono & Teléfonos de cada empleado. \\
+SocioTelefono & Teléfonos de cada Socio. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad Amarre
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Amarre.}
+\label{tab-DiccR-3b}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+codAmarre	&	DCodigo	&	Código de Identificación del Amarre	&		&	No Nulo, Único\\
+codZona	&	DCodigo	&	Código de Identificación de la Zona	&		&	No Nulo, Único\\
+codSocio	&	DCodigo	&	Código de Identificación del Socio dueño del amarre	&		&	\\
+FechaCompra	&	DFecha	&	Fecha de compra del amarre	&		&	\\
+Numero	&	Dcantidad	&	Numero del Amarre	&		&	No Nulo\\
+Mantenimiento	&	Dcontrato	&	Si tiene contratado Servicios	&		&	No Nulo\\
+Agua	&	DCantidad	&	Cantidad medida en el contador de Agua	&		&	No Nulo\\
+Luz	&	Dcantidad	&	Cantidad medida en el contador de Luz	&		&	Nulo\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad Embarcación
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Embarcacion.}
+\label{tab-DiccR-3c}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodEmbarcacion	&	DCodigo	&	Código de Identificación del Barco	&		&	No Nulo, Único\\
+CodSocio	&	DCodigo	&	Código de Identificación del Socio	&		&	No Nulo, Único\\
+Nombre	&	DNombre	&	Nombre del Barco	&		&	No Nulo\\
+Matricula	&	DNombre	&	Matricula del Barco	&		&	No Nulo\\
+TipoBarco	&	DTipoBarco	&	Tipo de Barco	&		&	No Nulo\\
+Dimensiones	&	DDimensiones	&	Dimensiones del Barco	&		&	No Nulo\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad Empleado
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Empleado.}
+\label{tab-DiccR-3d}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodEmpleado	&	DCodigo	&	Código de Identificación del Empleado	&		&	No Nulo, Único\\
+Nombres	&	DNombre	&	Nombres del Empleado	&		&	No Nulo\\
+Apellidos	&	DNombre	&	Apellidos del Empleado	&		&	No Nulo\\
+Direccion	&	DDireccion	&	Dirección del Empleado	&		&	No Nulo\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad EmpleadoTelefono
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad EmpleadoTelefono.}
+\label{tab-DiccR-3k}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodEmpleado	&	DCodigo	&	Código de Identificación del Empleado	&		&	No Nulo, Único\\
+Telefono	&	DTelefono	&	Teléfono del Empleado	&		&	No Nulo\\
+TipoTelefono	& DNombre		&	Tipo de Teléfono	&		&	No Nulo\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad EmpleadoEspecialidad
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad EmpleadoEspecialidad.}
+\label{tab-DiccR-3l}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodEmpleado	&	DCodigo	&	Código de Identificación del Empleado	&		&	No Nulo, Único\\
+CodEspecialidad	& DCodigo		&	Código de Identificación de la Especialidad	&		&	No Nulo, Único\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad Especialidad
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Especialidad.}
+\label{tab-DiccR-3m}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodEspecialidad	&	DCodigo	&	Código de Identificación de la especialidad	&		&	No Nulo, Único\\
+Especialidad	& DEspecialidad		&	Especialidad	&		&	No Nulo\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad Socio
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Socio.}
+\label{tab-DiccR-3e}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodSocio	&	DCodigo	&	Código de Identificación del Socio	&		&	No Nulo, Único\\
+Cedula	&	DCedula	&	Cedula del Socio	&		&	No Nulo\\
+Nombres	&	Dnombre	&	Nombres del Socio	&		&	No Nulo\\
+Apellidos	&	DNombre	&	Apellidos del Socio	&		&	No Nulo\\
+Direccion	&	DDireccion	&	Dirección del Socio	&		&	No Nulo\\
+Telefono	&	DTelefono	&	Teléfono del Socio	&		&	No Nulo\\
+FechaIngreso	&	DFecha	&	Fecha de Ingreso del Socio al Club Náutico	&		&	No Nulo\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad Zona
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Zona.}
+\label{tab-DiccR-3f}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+codZona	&	DCodigo	&	Código de Identificación dela zona.	&		&	No Nulo, Único\\
+Letra	&	DLetra	&	Letra identificativa de la Zona	&		&	No Nulo\\
+TipoBarco	&	DTipoBarco	&	Tipo de barcos a ubicar en la zona	&		&	No Nulo\\
+CantidadBarcos	&	DCantidad	&	Numero de Barcos en la zona	&		&	No Nulo\\
+Profundidad	&	DCantidad	&	Profundidad de la Zona	&		&	No Nulo\\
+Ancho	&	DCantidad	&	Ancho de la Zona	&		&	No Nulo\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad AmarreEmbarcacion
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad AmarreEmbarcacion.}
+\label{tab-DiccR-3g}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodAmarre	&	DCodigo	&	Código de Identificación del Amarre	&		&	No Nulo, Único\\
+CodEmbarcacion	&	DCodigo	&	Código de Identificación de la Embarcación	&		&	No Nulo, Único\\
+FechaAsignacion	&	DFecha	&	Fecha en que se asigno la embarcación al amarre	&		&	No Nulo\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad ZonaEmpleado
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad ZonaEmpleado.}
+\label{tab-DiccR-3i}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodZona	&	DCodigo	&	Código de Identificación de la Zona	&		&	No Nulo, Único\\
+CodEmpleado	&	DCodigo	&	Código de Identificación del Empleado	&		&	No Nulo, Único\\
+CantidadBarcos	&	DCantidad	&	Cantidad de embarcaciones asignadas al empleado	&		&	No Nulo\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad SocioTelefono
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad SocioTelefono.}
+\label{tab-DiccR-3j}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodSocio	&	DCodigo	&	Código de Identificación del Socio	&		&	No Nulo, Único\\
+Telefono	&	DTelefono	&	Teléfono del Socio	&		&	No Nulo\\
+TipoTelefono	& DNombre		&	Tipo de Teléfono	&		&	No Nulo\\
+\bottomrule
+\end{tabular}
+\end{table}

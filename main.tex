@@ -1,0 +1,246 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-tabla]{babel}
+\usepackage{float}
+\usepackage{array,booktabs}
+
+\usepackage{tikz}
+\usepackage{weiwER}
+\usepackage{subfig}
+\usepackage{graphicx,adjustbox}
+\usepackage{pdflscape}
+
+\usepackage{afterpage}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\captionsetup{belowskip=8pt,aboveskip=6pt}
+
+\setlength{\pdfpagewidth}{215.9mm}
+\setlength{\pdfpageheight}{279.4mm}
+
+\usepackage[letterpaper, tmargin=3.0cm, lmargin=3.0cm, bmargin=2.5cm, rmargin=2.5cm, paperwidth=215.9mm, paperheight=279.4mm]{geometry}
+
+\begin{document}
+
+\input{FrontPage.tex}
+\newpage
+
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+
+\listoffigures
+\listoftables
+\thispagestyle{empty}
+\newpage
+
+%%%%%%%     MINISTERIO DE DEFENSA
+\section{Ministerio de Defensa}
+
+\input{Enunciados/01_Defensa.tex}
+
+\afterpage{
+
+\begin{landscape}
+    \subsection{Modelo Entidad Relación}
+    
+    \begin{center}
+        \input{ER_Modelo/01_Defensa.tikz}
+    \end{center}
+
+    \subsection{Diccionario de Datos del Modelo Entidad Relación}
+    
+    \subsubsection{Dominios}
+    \begin{center}
+        \input{ER_Dominios/01_Defensa.tex}
+    \end{center}
+    
+    \subsubsection{Entidades}
+    \begin{center}
+        \input{ER_Diccionario/01_Defensa.tex}
+    \end{center}
+    
+    \subsection{Modelo Relacional}
+    
+    \begin{figure}[H]
+        \centering
+        \fbox{\includegraphics[width=1.0\hsize]{Relacional_Modelo/Defensa.pdf}}
+        \caption{Modelo Relacional de Defensa.}
+        \label{fig:Defensa_MR}
+    \end{figure}
+    
+    \subsection{Diccionario de Datos del Modelo Relacional}
+    
+    \subsubsection{Dominios}
+    \begin{center}
+        \input{Relacional_Dominios/01_Defensa.tex}
+    \end{center}
+    
+    \subsubsection{Entidades}
+    \begin{center}
+        \input{Relacional_Diccionario/01_Defensa.tex}
+    \end{center}
+    
+    \end{landscape}
+}
+
+\newpage
+%%%%%       OLIMPICOS
+\section{Eventos Olímpicos}
+
+\input{Enunciados/02_Olimpicos.tex}
+
+\afterpage{
+\begin{landscape}
+    \subsection{Modelo Entidad Relación}
+    
+    \begin{center}
+        \input{ER_Modelo/02_Olimpicos.tikz}
+    \end{center}
+
+    \subsection{Diccionario de Datos del Modelo Entidad Relación}
+    
+    \subsubsection{Dominios}
+    \begin{center}
+        \input{ER_Dominios/02_Olimpiadas.tex}
+    \end{center}
+    
+    \subsubsection{Entidades}
+    \begin{center}
+        \input{ER_Diccionario/02_Olimpiadas.tex}
+    \end{center}
+    
+    \subsection{Modelo Relacional}
+    
+    \begin{figure}[H]
+        \centering
+        \fbox{\includegraphics[width=0.75\hsize]{Relacional_Modelo/Olimpiadas.pdf}}
+        \caption{Modelo Relacional de las Olimpiadas.}
+        \label{fig:Olimpiadas_MR}
+    \end{figure}
+    
+    \subsection{Diccionario de Datos del Modelo Relacional}
+    
+    \subsubsection{Dominios}
+    \begin{center}
+        \input{Relacional_Dominios/02_Olimpiadas.tex}
+    \end{center}
+    
+    \subsubsection{Entidades}
+    \begin{center}
+        \input{Relacional_Diccionario/02_Olimpiadas.tex}
+    \end{center}
+    
+    \end{landscape}
+}
+
+\newpage
+%%%%%       BANCO
+\section{Policia Nacional --- Banco}
+
+\input{Enunciados/03_Banco.tex}
+
+\afterpage{
+\begin{landscape}
+    \subsection{Modelo Entidad Relación}
+    
+    \begin{center}
+        \input{ER_Modelo/03_Banco.tikz}
+    \end{center}
+
+    \subsection{Diccionario de Datos del Modelo Entidad Relación}
+    
+    \subsubsection{Dominios}
+    \begin{center}
+        \input{ER_Dominios/03_Bancos.tex}
+    \end{center}
+    
+    \subsubsection{Entidades}
+    \begin{center}
+        \input{ER_Diccionario/03_Bancos.tex}
+    \end{center}
+    
+    \subsection{Modelo Relacional}
+    
+    \begin{figure}[H]
+        \centering
+        \fbox{\includegraphics[width=0.9\hsize]{Relacional_Modelo/Banco.pdf}}
+        \caption{Modelo Relacional de Policía Nacional --- Bancos.}
+        \label{fig:Bancos_MR}
+    \end{figure}
+    
+    \subsection{Diccionario de Datos del Modelo Relacional}
+    
+    \subsubsection{Dominios}
+    \begin{center}
+        \input{Relacional_Dominios/03_Bancos.tex}
+    \end{center}
+    
+    \subsubsection{Entidades}
+    \begin{center}
+        \input{Relacional_Diccionario/03_Bancos.tex}
+    \end{center}
+    
+    \end{landscape}
+}
+
+\newpage
+%%%%%       CLUB NAUTICO
+\section{Club Náutico}
+
+\input{Enunciados/04_Club.tex}
+
+\afterpage{
+\begin{landscape}
+    \subsection{Modelo Entidad Relación}
+    
+    \begin{center}
+        \input{ER_Modelo/04_Club.tikz}
+    \end{center}
+
+    \subsection{Diccionario de Datos del Modelo Entidad Relación}
+    
+    \subsubsection{Dominios}
+    \begin{center}
+        \input{ER_Dominios/04_Club.tex}
+    \end{center}
+    
+    \subsubsection{Entidades}
+    \begin{center}
+        \input{ER_Diccionario/04_Club.tex}
+    \end{center}
+    
+    \subsection{Modelo Relacional}
+    
+    \begin{figure}[H]
+        \centering
+        \fbox{\includegraphics[width=1.0\hsize]{Relacional_Modelo/Club.pdf}}
+        \caption{Modelo Relacional del Club Náutico.}
+        \label{fig:Club_MR}
+    \end{figure}
+    
+    \subsection{Diccionario de Datos del Modelo Relacional}
+    
+    \subsubsection{Dominios}
+    \begin{center}
+        \input{Relacional_Dominios/04_Club.tex}
+    \end{center}
+    
+    \subsubsection{Entidades}
+    \begin{center}
+        \input{Relacional_Diccionario/04_Club.tex}
+    \end{center}
+    
+    \end{landscape}
+}
+
+\end{document}

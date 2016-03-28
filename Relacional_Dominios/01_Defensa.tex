@@ -1,0 +1,21 @@
+\begin{table}[H]
+    \centering
+    \caption{Dominios del modelo relacional Ministerio de Defensa.}
+    \renewcommand{\arraystretch}{1.5}% Spread rows out...
+    \label{tab-DomR-01}
+    \resizebox{1.25\textwidth}{!}{
+        \begin{tabular}
+            {>{\bfseries}m{2.0cm} >{\centering}m{2cm} >{}m{4cm} >{\arraybackslash}m{2cm}>{\arraybackslash}m{1cm}>{\arraybackslash}m{5cm}>{\arraybackslash}m{2cm}}
+            \toprule
+            \multicolumn{1}{c}{\textbf{Nombre}} & \multicolumn{1}{c}{\textbf{Tipo}} & \multicolumn{1}{c}{\textbf{Formato}} & \multicolumn{1}{c}{\textbf{Unidad}} & \multicolumn{1}{c}{\textbf{Valores}} & \multicolumn{1}{c}{\textbf{Descripción}} &
+            \multicolumn{1}{c}{\textbf{Atributos}}\\ \midrule
+            DCodigo     & VARCHAR             & \{Dígitos, Letras\}1,10              &                                     &                                      & Identificador Principal    &   CodArmas \newline CodServicio \newline CodSoldado \newline CodCompania \newline CodCuartel   \\\hline
+            DLatitud    & NUMBER          & \{Dígitos\}                          & Grados Decimales                    & --90 a 90                            & Grados decimales con respecto al Ecuador     & Latitud           \\\hline
+            DLongitud   & NUMBER          & \{Dígitos\}                          & Grados Decimales                    & --180 a 180                          & Grados decimales con respecto al meridiano de Greenwich & Longitud \\\hline
+            DNombre     & VARCHAR             & \{Dígitos, Letras\}1,100             &                                     &                                      & Nombre de persona o institución     & Descripcion \newline NombreArmas \newline Nombres \newline Apellidos \newline Grado \newline Actividad \newline NombreCuartel                     \\\hline
+            DDireccion  & VARCHAR             & \{Dígitos, Letras\}1,250             &                                     &                                      & Ubicación de la institución   & Direccion                          \\\hline
+            DCiudad     & VARCHAR             & \{Dígitos, Letras\}1,100             &                                     &                                      & Nombre de las ciudades  & Ciudad                                \\\hline
+            DFecha      & DATE             & \{dd/mm/yyyy\}                       & Fecha                               &                                      & Fecha de ejecución del servicio   & Fecha                      \\\bottomrule
+        \end{tabular}
+    }
+\end{table}

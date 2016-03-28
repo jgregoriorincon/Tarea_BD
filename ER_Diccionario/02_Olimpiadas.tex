@@ -1,0 +1,140 @@
+\begin{table}[H]
+\centering
+\caption{Definiciones de las entidades del modelo Entidad Relación de Olimpiadas.}
+\renewcommand{\arraystretch}{1.5}% Spread rows out...
+\label{tab-Dicc-10}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Entidad}  & \textbf{Definición}\\ \midrule
+Area    & Zona destinada a las actividades deportivas de un Polideportivo. \\
+Comisario  & Persona encargada de observar o juzgar durante un evento deportivo.\\
+ComplejoDeportivo & Espacio físico donde se realizan eventos deportivos.\\
+ElementoDeportivo & Elemento, dispositivo o artefacto necesario para ejecutar un evento deportivo.\\
+Evento & Actividad deportiva que se realiza en un complejo deportivo.\\
+Polideportivo & Complejo donde se pueden realizar más de una actividad deportiva.\\
+SedeOlimpica & Almacena los datos de la sede olímpica.\\
+UniDeportivo & Complejo donde se realizar una actividad deportiva.\\ \bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad Area
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Area.}
+\label{tab-Dicc-11}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodArea    & DCodigo   & Código de Identificación  del Área deportiva &   & No Nulo, Único\\
+Localizacion    & DNombre   & Localización del área dentro del polideportivo &   & No Nulo\\
+Orientacion    & DNombre   & Orientación  del área dentro del polideportivo &   & No Nulo\\
+Cuadrante    & DNombre   & Cuadrante del área dentro del polideportivo &   & No Nulo\\
+NombreDeporte    & DNombre   & Nombre del deporte ejecutado en el área dentro del polideportivo &   & No Nulo\\
+Extension & DArea   & Tamaño en metros cuadrados del área dentro del polideportivo  &   & No Nulo\\ \bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad Comisario
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Comisario.}
+\label{tab-Dicc-12}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodComisario	&   DCodigo	&   Código de Identificación  del Comisario	&	&   No Nulo, Único  \\
+Nombre	&   DNombre	&   Nombres y Apellidos del Comisario	&	&   No Nulo \\\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad ComplejoDeportivo
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad ComplejoDeportivo.}
+\label{tab-Dicc-13}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodComplejo	&	DCodigo	&	Código de identificación del Complejo Deportivo	&		&	No Nulo, Único\\
+Jefe	&	DNombre	&	Nombre del Jefe encargado del Complejo deportivo	&		&	No Nulo\\
+Latitud	&	DLatitud	&	Latitud del complejo deportivo en grados decimales	&		&	No Nulo\\
+Longitud	&	DLongitud	&	Longitud del complejo deportivo en grados decimales	&		&	No Nulo\\
+Direccion	&	DDireccion	&	Dirección del complejo deportivo	&		&	No Nulo\\
+Ciudad	&	DCiudad	&	Ciudad donde está ubicado el complejo deportivo	&		&	No Nulo\\\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad ElementoDeportivo
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad ElementoDeportivo.}
+\label{tab-Dicc-14}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodElemento	&	DCodigo	&	Código de Identificación del Elemento deportivo	&		&	No Nulo, Único\\
+Nombre	&	DNombre	&	Nombre del Elemento Deportivo	&		&	No Nulo\\
+Stock	&	DCantidad	&	Cantidad de elementos disponibles	&		&	No Nulo\\\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad Evento
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Evento.}
+\label{tab-Dicc-15}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodEvento	&	DCodigo	&	Código de Identificación del Evento	&		&	No Nulo, Único\\
+FechaEvento	&	DFecha	&	Fecha de ejecución del evento deportivo	&		&	No Nulo\\
+DuracionEvento	&	DDuracion	&	Tiempo de duración del evento deportivo	&		&	No Nulo\\
+NumParticipantes	&	DCantidad	&	Cantidad de participantes en la actividad	&		&	No Nulo\\
+NumComisarios	&	DCantidad	&	Cantidad de Comisarios en la actividad	&		&	No Nulo\\\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad Polideportivo
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad Polideportivo.}
+\label{tab-Dicc-16}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodComplejoPoli	&	DCodigo	&	Código de identificación del Polideportivo	&		&	No Nulo, Único\\
+Nombre	&	DNombre	&	Nombre del Polideportivo	&		&	No Nulo\\
+Presupuesto	&	DPresupuesto	&	Presupuesto disponible para el Polideportivo	&		&	\\
+Extension	&	DArea	&	Tamaño del Polideportivo	&		&	No Nulo\\\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad SedeOlimpica
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad SedeOlimpica.}
+\label{tab-Dicc-17}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodSede	&	DCodigo	&	Código de identificación de la Sede	&		&	No Nulo\\
+Nombre	&	DNombre	&	Nombre de la Sede	&		&	No Nulo\\
+NumeroComplejos	&	DCantidad	&	Cantidad de Complejos de la Sede	&	Sumatoria de de la cantidad complejos deportivos	&	No Nulo\\
+Presupuesto	&	DPresupuesto	&	Presupuesto asignado a la sede	&	Sumatoria de los presupuestos de los complejos deportivos	&	\\\bottomrule
+\end{tabular}
+\end{table}
+
+%Diccionario de datos de la Entidad UniDeportivo
+\begin{table}[H]
+\centering
+\caption{Diccionario de datos de la Entidad UniDeportivo.}
+\label{tab-Dicc-18}
+\begin{tabular}{>{\bfseries}m{4.0cm}>{}m{3.0cm}>{}m{6.0cm}>{}m{5.0cm}>{}m{2.0cm}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Dominio}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Defecto}} & \multicolumn{1}{c}{\textbf{Restricciones}} \\ \midrule
+CodComplejoUni	&	DCodigo	&	Código de identificación del complejo deportivo	&		&	No Nulo, Único\\
+Nombre	&	DNombre	&	Nombres del complejo deportivo	&		&	No Nulo\\
+Presupuesto	&	DPresupuesto	&	Presupuesto disponible para el complejo deportivo	&		&	\\
+Extension	&	DArea	&	Tamaño del complejo deportivo	&		&	No Nulo\\\bottomrule
+\end{tabular}
+\end{table}

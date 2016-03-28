@@ -1,0 +1,104 @@
+\begin{figure}[H]
+   \centering
+    \begin{adjustbox}{max width=1.1\textwidth}
+        \begin{tikzpicture} 
+          % Entidades - Relaciones
+          \matrix[row sep=3cm, column sep=4cm] {
+            
+            \entity{uni}{UniDeportivo} & 
+            \relationship{rel_1}{Pertenece}     
+            
+            \\
+            
+            \relationship{rel_2}{Pertenece} & 
+            \entity{complejo}{ComplejoDeportivo} & 
+            \relationship{rel_3}{Se Realiza} 
+            
+            \\
+            
+            \entity{polidepor}{Polideportivo} & 
+            \relationship{rel_4}{Posee} & 
+            \entity{evento}{Evento} & 
+            \relationship{rel_6}{Involucra} 
+            
+            \\
+            
+            \relationship{rel_5}{Conforma} &  &
+            \relationship{rel_7}{Requiere} 
+            
+            \\
+            
+            \entity{area}{Area} & 
+            \entity{sede}{SedeOlimpica} & 
+            \entity{Elemento}{ElementoDeportivo}  & 
+            \entity{Comisario}{Comisario} \\    
+          };
+          
+          % relationships
+          \buildrelationship{rel_1}{complejo}{(1,1)}{uni}{(1,n)}
+          \buildrelationship{rel_2}{complejo}{(1,1)}{polidepor}{(1,n)}
+          \buildrelationship{rel_3}{complejo}{(1,1)}{evento}{(1,n)}
+          \buildrelationship{rel_4}{complejo}{(1,n)}{sede}{(1,1)}
+          \buildrelationship{rel_5}{polidepor}{(1,1)}{area}{(2,n)}
+          \buildrelationship{rel_6}{evento}{(1,n)}{Comisario}{(1,n)}
+          \buildrelationship{rel_7}{evento}{(1,n)}{Elemento}{(1,n)}
+          
+          %atributos para las entidades
+          %Unideporte
+          \pkattrib{uni}{145}{CodComplejoUni}{35}
+          \attrib{uni}{165}{Nombre}{30}
+          \dvattrib{uni}{190}{Presupuesto}{30}
+          \attrib{uni}{215}{Extension}{35}
+          
+          %Unideporte
+          \pkattrib{complejo}{145}{CodComplejo}{35}
+          \attrib{complejo}{70}{Jefe}{25}
+          \attrib{complejo}{40}{Latitud}{30}
+          \attrib{complejo}{20}{Longitud}{35}
+          \attrib{complejo}{340}{Direccion}{35}
+          \attrib{complejo}{310}{Ciudad}{35}
+          
+          %Polideportivo
+          \pkattrib{polidepor}{145}{CodComplejoPoli}{35}
+          \attrib{polidepor}{165}{Nombre}{30}
+          \dvattrib{polidepor}{190}{Presupuesto}{30}
+          \attrib{polidepor}{215}{Extension}{35}
+          
+          %Area
+          \pkattrib{area}{145}{CodArea}{35}
+          \attrib{area}{165}{Localizacion}{30}
+          \attrib{area}{190}{Orientacion}{30}
+          \attrib{area}{215}{Cuadrante}{35}
+          \attrib{area}{260}{NombreDeporte}{30}
+          \attrib{area}{310}{Extension}{30}
+          
+          %Sede
+          \pkattrib{sede}{145}{CodSede}{35}
+          \attrib{sede}{165}{Nombre}{30}
+          \dvattrib{sede}{195}{Presupuesto}{30}
+          \attrib{sede}{270}{NumeroComplejos}{25}
+          
+          %Evento
+          \pkattrib{evento}{165}{CodEvento}{30}
+          \attrib{evento}{195}{Fecha}{30}
+          \attrib{evento}{225}{DuracionEvento}{30}
+          \attrib{evento}{25}{NumeroParticipantes}{35}
+          \attrib{evento}{330}{NumeroComisarios}{35}
+          
+          %Elemento
+          \pkattrib{Elemento}{145}{CodElemento}{35}
+          \attrib{Elemento}{230}{Nombre}{30}
+          \attrib{Elemento}{310}{Stock}{30}
+          
+          %Comisario
+          \pkattrib{Comisario}{230}{CodComisario}{30}
+          \attrib{Comisario}{310}{Nombre}{30}
+          
+          \attrib{rel_6}{90}{Rol}{30}
+          \attrib{rel_7}{180}{Cantidad}{30}
+          
+        \end{tikzpicture}
+    \end{adjustbox}
+    \caption{Modelo Entidad Relación de las Olimpiadas.}
+    \label{fig:Olimpicos_MER}
+\end{figure}

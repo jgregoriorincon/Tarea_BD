@@ -1,0 +1,21 @@
+\begin{table}[H]
+    \centering
+    \caption{Dominios del modelo relacional Policía Nacional --- Bancos.}
+    \renewcommand{\arraystretch}{1.4}% Spread rows out...
+    \label{tab-DomR-03}
+    \resizebox{1.5\textwidth}{!}{
+        \begin{tabular}
+            {>{\bfseries}m{3.0cm} >{\centering}m{2cm} >{}m{4cm} >{\arraybackslash}m{2cm}>{\arraybackslash\centering}m{2cm}>{\arraybackslash}m{6.5cm}>{\arraybackslash}m{6.5cm}}
+            \toprule
+            \multicolumn{1}{c}{\textbf{Nombre}} & \multicolumn{1}{c}{\textbf{Tipo}} & \multicolumn{1}{c}{\textbf{Formato}} & \multicolumn{1}{c}{\textbf{Unidad}} & \multicolumn{1}{c}{\textbf{Valores}} & \multicolumn{1}{c}{\textbf{Descripción}} & \multicolumn{1}{c}{\textbf{Atributos}}\\ \midrule
+DCodigo     & VARCHAR       & \{Dígitos, Letras\}1,10   &             &           & Identificador Principal            & Banco: CodBanco \newline Banda: CodBanda \newline Delincuente: CodDelincuente \newline Juez: CodJuez \newline Sucursal: CodSucursal \newline Vigilante: CodVigilante \\ \hline
+DNombre     & VARCHAR       & \{Dígitos, Letras\}1,100  &             &           & Nombre de persona o institución    & Banco: Nombre \newline Banda: Nombre \newline Delincuente: Nombre \newline Juez: Nombre \newline Sucursal: Nombre \newline Vigilante: Nombres \newline Vigilante: Apellidos \\ \hline
+DDireccion  & VARCHAR       & \{Dígitos, Letras\}1,250  &             &           & Ubicación de la institución        & Banco: Direccion \newline Sucursal: Direccion \\ \hline
+DCantidad   & NUMBER        & \{Dígitos\}               &             & $ >= 0$   & Cantidad de Personas, años, etc.   & Banda: NumeroMiembros \newline Sucursal: NumeroEmpleados \\ \hline
+DEdad       & NUMBER        & \{Dígitos\                &             & $ >= 0$   & Cantidad de Años                   & Juez: TiempoServicio \newline Vigilante: Edad \newline DelincuenteJuez: TiempoCondena \\ \hline
+DFecha      & DATE          & \{dd/mm/yyyy\}            & Fecha       &           & Fecha de ejecución del servicio    & SucursalVigilante: Fecha \newline SucursalDelincuente: Fecha       \\ \hline
+DSiNo       & VARCHAR       & \{Letras\}2               &             & SI\newline NO & Si se ha hecho o no una actividad    & SucursalVigilante: Arma \newline DelincuenteJuez: Condenado \\
+            \bottomrule
+        \end{tabular}
+    }
+\end{table}
